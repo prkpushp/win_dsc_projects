@@ -10,4 +10,4 @@
     -   cred.yml
   tasks:
     - include_tasks: 'tasks/ping.yml'
-    - include_tasks: 'tasks/group.yml'
+    #- include_tasks: 'tasks/group.yml'
