@@ -1,6 +1,6 @@
 ---
 - name: Configure DFS Cluster
-  hosts: dfs_primary
+  hosts: dc
   gather_facts: false
   become_method: runas
   become: yes
