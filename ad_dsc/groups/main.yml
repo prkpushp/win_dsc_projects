@@ -7,6 +7,6 @@
   become_user: '{{ ansible_user }}'
   vars_files:
     -   play_vars.yml
-    -   cred.yml
+    -   ../../cred.yml
   tasks:
     - include_tasks: 'tasks/group.yml'
