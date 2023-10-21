@@ -1,0 +1,11 @@
+---
+- name: AD Group
+  win_dsc:
+    resource_name: ADGroup
+    GroupName: infotech-admins
+    GroupScope: Global
+    Category: Security
+    Ensure: Present
+    EnableTargetFailback: True
+    PsDscRunAsCredential_username: '{{ansible_user}}'
+    PsDscRunAsCredential_password: '{{ansible_password}}'
