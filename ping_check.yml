@@ -1,0 +1,6 @@
+---
+- name: Ping Check
+  hosts: dc1  # Replace with the target machine's hostname or IP address
+  tasks:
+    - name: Perform Ping Test
+      ping:
