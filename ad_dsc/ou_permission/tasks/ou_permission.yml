@@ -5,7 +5,7 @@
     Path: '{{OUPATH}}'
     IdentityReference: win\dc1$
     AccessControlType: 'Allow'
-    ActiveDirectoryRights: 'ReadProperty', 'WriteProperty'
+    ActiveDirectoryRights: 'ReadProperty'
     ActiveDirectorySecurityInheritance: 'None'
     ObjectType: '00000000-0000-0000-0000-000000000000'
     InheritedObjectType: '00000000-0000-0000-0000-000000000000'
