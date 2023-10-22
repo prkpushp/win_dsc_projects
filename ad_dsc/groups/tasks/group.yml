@@ -1,22 +1,17 @@
 ---
-
-- name: Get List of Services
-  win_service:
-    state: list
-  register: services_result
-
-- name: Display Services
-  debug:
-    var: services_result.services
+- name: Import Module
+  win_shell: |
+    Install-Module -Name ActiveDirectoryDsc -Force
+    Import-Module -Name ActiveDirectoryDsc
 
 - name: AD Group
   win_dsc:
     resource_name: ADGroup
-    GroupName: infotech-admins
+    GroupName: infotech-admins-new
     GroupScope: Global
     Category: Security
+    Path: 'OU=Groups,DC=win,DC=infotech,DC=com'
     Ensure: Present
-    EnableTargetFailback: True
     PsDscRunAsCredential_username: '{{ansible_user}}'
     PsDscRunAsCredential_password: '{{ansible_password}}'
-    
+

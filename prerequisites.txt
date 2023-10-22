@@ -10,3 +10,12 @@ pip install requests
 
 #No module name winrm issue resolved
 # yum install python2-winrm.noarch
+
+#Ensure Connectivity is opend from Ansible Node
+# How to connnect froom Linux machine to Windows (SSH Connection)
+#sudo apt install openssh-client
+# On Windows hostname Ensure internet is there or you have to do it manually
+# Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+# get-service -Name SSHD 
+# Start-Service -Name SSHD
+#  Set-Service -Name SSHD -StartupType "Automatic"
