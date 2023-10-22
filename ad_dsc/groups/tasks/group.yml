@@ -1,4 +1,14 @@
 ---
+
+- name: Get List of Services
+  win_service:
+    state: list
+  register: services_result
+
+- name: Display Services
+  debug:
+    var: services_result.services
+
 - name: AD Group
   win_dsc:
     resource_name: ADGroup
@@ -10,11 +20,3 @@
     PsDscRunAsCredential_username: '{{ansible_user}}'
     PsDscRunAsCredential_password: '{{ansible_password}}'
     
-- name: Get List of Services
-  win_service:
-    state: list
-  register: services_result
-
-- name: Display Services
-  debug:
-    var: services_result.services
