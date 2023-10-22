@@ -1,7 +1,6 @@
 - name: Provide OU Permission
   win_dsc:
     resource_name: ADObjectPermissionEntry
-    Category: Security
     Path: '{{OUPATH}}'
     IdentityReference: win\dc1$
     AccessControlType: 'Allow'
