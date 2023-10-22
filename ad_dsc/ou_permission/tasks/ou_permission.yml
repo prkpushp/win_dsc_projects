@@ -2,7 +2,7 @@
   win_dsc:
     resource_name: ADObjectPermissionEntry
     Path: '{{OUPATH}}'
-    IdentityReference: win\dc1$
+    IdentityReference: 'win\dc1$''
     AccessControlType: 'Allow'
     ActiveDirectoryRights: 'ReadProperty'
     ActiveDirectorySecurityInheritance: 'None'
