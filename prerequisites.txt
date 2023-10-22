@@ -19,3 +19,4 @@ pip install requests
 # get-service -Name SSHD 
 # Start-Service -Name SSHD
 #  Set-Service -Name SSHD -StartupType "Automatic"
+# Ensure to have Nuget and ActiveDirectoryDsc on Remote computer

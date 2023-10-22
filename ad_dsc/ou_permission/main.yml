@@ -1,9 +1,4 @@
 ---
-- name: Download and configure dsc packages
-  hosts: localhost
-
-
-
 - name: Configure DFS Cluster
   hosts: dc
   gather_facts: false
@@ -15,4 +10,4 @@
     -   cred.yml
   tasks:
     - include_tasks: 'tasks/ping.yml'
-    - include_tasks: 'tasks/group.yml'
+    #- include_tasks: 'tasks/group.yml'
