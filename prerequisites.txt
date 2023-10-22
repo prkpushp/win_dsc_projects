@@ -7,3 +7,6 @@ curl -o get-pip.py https://bootstrap.pypa.io/pip/2.7/get-pip.py
 #Needed for winrm communicationn towards windows servers
 pip install pywinrm
 pip install requests
+
+#No module name winrm issue resolved
+# yum install python2-winrm.noarch
