@@ -1,4 +1,9 @@
 ---
+- name: Download and configure dsc packages
+  hosts: localhost
+
+
+  
 - name: Configure DFS Cluster
   hosts: dc
   gather_facts: false
@@ -9,5 +14,5 @@
     -   play_vars.yml
     -   cred.yml
   tasks:
-    - include_tasks: 'tasks/ping.yml'
-    #- include_tasks: 'tasks/group.yml'
+    - include_tasks: 'ou_permission.yml'
+    #- include_tasks:
